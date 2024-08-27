@@ -17,5 +17,14 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
   },
+  lastText: {
+    marginTop: 10,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: COLORS.primaryColor,
+  },
+  lastLoginText: {
+    color: COLORS.normalTextColor,
+  },
 });
 export default styles;

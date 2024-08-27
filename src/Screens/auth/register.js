@@ -1,7 +1,8 @@
-import {View, Text, SafeAreaView, TextInput} from 'react-native';
+import {View, Text, SafeAreaView, TextInput, Alert} from 'react-native';
 import React, {useState} from 'react';
 import styles from '../../Styles/registerStyle';
 import InputBox from '../../Components/inputBox';
+import SubmitButton from '../../Components/submitButton';
 
 const Register = () => {
   const [values, setValues] = useState({
@@ -9,6 +10,11 @@ const Register = () => {
     email: '',
     password: '',
   });
+
+  //Functions
+  const handleSubmit = () => {
+    Alert.alert('Click on Register Button');
+  };
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -38,6 +44,10 @@ const Register = () => {
           setValues({...values, password: text});
         }}
       />
+      <SubmitButton label="Register" handleSubmit={handleSubmit} />
+      <Text style={styles.lastText}>
+        Already Register? <Text style={styles.lastLoginText}>LOGIN</Text>
+      </Text>
     </SafeAreaView>
   );
 };
